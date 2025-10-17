@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --audiowide: "Audiowide", sans-serif;
+
+    --primary: #1f1f25;
+    --secondary: #1C1C22;
+
+    --text: #f0f0f0;
+
+    --header: #1c1c22ab;
+    --bg: #1f1f25;
+    --gradient-bot: #2c2c2c;
+
+    --light-gr: #00FF99;
+    --hover-gr: #00E187;
+}
+
+/* Body */
+body {
+    background-color: var(--secondary);
+}
+
+main {
+    padding-top: 5rem;
+    background-color: var(--secondary);
+}
+
+/* Header */
+header {
+    position: fixed;
+    padding-block: 1rem;
+    top: 0;
+    width: 100%;
+    background-color: var(--header);
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    padding: .5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bd-filter {
+    backdrop-filter: blur(30px);
+}
+
+nav p {
+    font-size: 1.5rem;
+    color: var(--text);
+    font-family: var(--audiowide);
+    font-variant: small-caps;
+}
+
+nav p span {
+    color: var(--light-gr);
+}
+
+.desktop-nav {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    padding-right: 5rem;
+}
+
+.desktop-nav li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    border-radius: 15px;
+    font-family: var(--audiowide);
+}
+
+a {
+    color: var(--text);
+}
+
+nav ul li a:hover {
+    color: var(--hover-gr);
+}
+
+.nav-svg {
+    width: 40px;
+    display: none;
+}
+
+.nav-svg img {
+    width: 100%;
+}
+
+/* Hero */
+.profile-img-container {
+  position: relative; /* Create stacking context */
+  border-radius: 50%;
+  width: clamp(250px, 50vw, 500px);
+  z-index: 3; /* Optional, if you want to elevate the container itself */
+}
+
+
+.profile-img-container img {
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    z-index: 3;
+}
+
+.desktop-nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 5rem;
+    grid-column: 2/6;
+    color: var(--text);
+}
+
+.right-hero {
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    text-align: center;
+    grid-column: 8/12;
+}
+
+.cv-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv-details div {
+    display: flex;
+    gap: 3rem;
+}
+
+.about-svg img {
+    height: 3rem;
+}
+
+.hero-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+    font-family: var(--audiowide);
+    height: 95vh;
+    background-image: linear-gradient(to bottom, var(--secondary), #2c2c2c);
+}
+
+.hero-container h1 {
+    font-size: 3rem;
+}
+
+.hero-contents-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / -1;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-inline: 5rem;
+    gap: 6rem;
+    grid-column: 1/-1;
+}
+
+.skill-card {
+    width: 100%;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    color: var(--text);
+}
+
+.img-container {
+    height: 100px;
+}
+
+.skill-card img {
+    height: 100%;
+}
+
+/* Reusable Classes */
+.light-gre {
+    color: var(--light-gr);
+}
+
+.btn {
+    padding: 1rem;
+    background-color: var(--light-gr);
+    border-radius: 15px;
+    text-decoration: none;
+    height: fit-content;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--hover-gr);
+    color: var(--secondary);
+}
+
+
+.mobile-nav {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+.rotating-square{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--light-gr);
+    height: 100%;
+    border-radius: 25%;
+    z-index: 2;
+    animation: spin 10s linear infinite;
+}
+.rotating-square2{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: var(--light-gr);
+    height: 100%;
+    border-radius: 25%;
+    z-index: 2;
+    transform: rotate(45deg);
+    animation: spin-rev 10s linear infinite;
+}
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spin-rev {
+  0%   { transform: rotate(45deg); }
+  100% { transform: rotate(-405deg); }
+}
+
+.rotating-square{
+  animation: spin 10s linear infinite;
+}
+.rotating-square2 {
+  animation: spin-rev 10s linear infinite;
+}
+/* MEDIA QUERIES*/
+@media only screen and (max-width: 1000px) {
+    .hero-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        height: auto;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    nav {
+        padding-right: 2rem;
+    }
+
+    .desktop-nav {
+        display: none
+    }
+
+    header {
+        height: fit-content;
+    }
+
+    nav {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .mobile-nav {
+        margin-top: 3rem;
+        gap: 1rem;
+        font-size: 1.5rem;
+        font-family: var(--audiowide);
+        color: var(--text);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .mobile-nav a {
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .nav-svg {
+        margin-top: .25rem;
+        display: inline;
+    }
+
+    .right-hero {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        padding: 2rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .left-hero {
+        grid-column: 1 / -1;
+        padding-block: 0;
+        grid-row: 2;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .skills-container {
+        padding-inline: 5rem;
+        grid-column: 1 / -1;
+        justify-items: center;
+        place-items: center;
+        padding: 0;
+        padding-block: 5rem;
+    }
+
+    .cv-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .cv-details div {
+        padding-inline: 6rem;
+        width: 100%;
+        justify-content: center;
+        gap: 5rem;
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-svg {
+        width: 25px;
+    }
+
+}
