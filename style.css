@@ -153,9 +153,10 @@ nav ul li a:hover {
 .hero-container {
     display: grid;
     position: relative;
+    gap: 4rem;
     grid-template-columns: repeat(12, 1fr);
     font-family: var(--audiowide);
-    height: 95vh;
+    height: 91vh;
     background-image: linear-gradient(to bottom, var(--secondary), #2c2c2c);
 }
 
@@ -320,7 +321,7 @@ nav ul li a:hover {
     .right-hero {
         grid-column: 1 / -1;
         grid-row: 1;
-        padding: 2rem;
+        padding: 4rem;
         text-align: center;
         justify-content: center;
     }
@@ -351,6 +352,7 @@ nav ul li a:hover {
     .cv-details div {
         padding-inline: 6rem;
         width: 100%;
+        padding-top: 4rem;
         justify-content: center;
         gap: 5rem;
     }
