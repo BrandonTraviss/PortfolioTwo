@@ -28,7 +28,6 @@ body {
 }
 
 main {
-    height: 100vh;
     padding-top: 5rem;
     background-color: var(--secondary);
 }
@@ -154,6 +153,7 @@ nav ul li a:hover {
 .hero-container {
     display: grid;
     position: relative;
+    margin-top: 4rem;
     gap: 4rem;
     grid-template-columns: repeat(12, 1fr);
     font-family: var(--audiowide);
@@ -176,7 +176,8 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-inline: 5rem;
+    padding-inline: 4rem;
+    padding-block: 4rem;
     gap: 6rem;
     grid-column: 1/-1;
 }
