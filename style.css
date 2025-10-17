@@ -276,6 +276,7 @@ nav ul li a:hover {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto;
         height: auto;
+        margin-top: 0rem;
         gap: 2rem;
         justify-content: center;
     }
