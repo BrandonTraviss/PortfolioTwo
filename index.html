@@ -11,11 +11,12 @@
     <header class="bd-filter">
         <nav>
             <div class="desktop-nav-container">
-                <p class="nav-me"><span>B</span>randon <span>T</span>raviss</p>
+                <a class="nav-me" href="#"><span class="light-gre">B</span>randon <span class="light-gre">T</span>raviss</a>
                 <ul class="desktop-nav">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Github</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a target="_blank" href="https://www.github.com/BrandonTraviss">Github</a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/brandon-traviss-57aa34369/">LinkedIn</a></li>
                     <li><a class="btn" href="">Contact</a></li>
                 </ul>
                 <div class="nav-svg">
@@ -23,28 +24,30 @@
                 </div>
             </div>
             <ul id="mobile-nav" class="mobile-nav inactive">
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Github</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a target="_blank" href="https://www.github.com/BrandonTraviss">Github</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/brandon-traviss-57aa34369/">LinkedIn</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="hero">
             <div class="hero-container">
                 <div class="hero-contents-container">
                     <div class="left-hero">
-                        <h3 class="light-gre m-b-3">Fullstack developer</h3>
+                        <h3 class="light-gre m-b-3">Full-stack developer</h3>
                         <div>
                             <h1>Hello I'm</h1>
                             <h1>Brandon Traviss</h1>
+                            <p class="small">Full-stack developer specializing in clean UI, scalable backend architecture, and modern web technologies.</p>
                         </div>
                     <div class="cv-details">
                         <a class="btn btn-dark-text" href="">Download CV</a>
                         <div>
-                            <a class="about-svg" href=""><img src="./img/svg/linkedIn.svg" alt="LinkedIn"></a>
-                            <a class="about-svg" href=""><img src="./img/svg/github.svg" alt="GitHub"></a>
+                            <a class="about-svg" target="_blank" href="https://www.linkedin.com/in/brandon-traviss-57aa34369/"><img src="./img/svg/linkedIn.svg" alt="LinkedIn">LinkedIn</a>
+                            <a class="about-svg" target="_blank" href="https://www.github.com/BrandonTraviss"><img src="./img/svg/github.svg" alt="GitHub">GitHub</a>
                         </div>
                     </div>
                     </div>
@@ -116,6 +119,81 @@
                 </div> 
             </div>
         </section>
+        <section id="projects" class="featured-project">
+            <h1 class="light-gre">Featured Project</h1>
+            <div class="featured-project-container">
+
+                <div class="featured-project-top">
+                    <h2>Reddit Clone</h2>
+                    <div class="featured-project-img-container">
+                        <img src="./img/featured.jpg" alt="">
+                    </div>
+                    <div class="link-container">
+                        <a class="btn" href="">Github</a>
+                        <a class="btn" href="">Live</a>
+                    </div>
+                </div>
+
+                <div class="featured-project-bot">
+                    <div class="featured-1">
+                        <div>
+                            <h2 class="light-gre">Libraries used</h2>
+                            <p class="lib">React</p>
+                            <p class="lib">Express</p>
+                            <p class="lib">MongoDB</p>
+                            <p class="lib">NodeJS</p>
+                        </div>
+                    </div>
+                    <div class="featured-2">
+                        <h2 class="light-gre">Features</h2>
+                        <p> <span class="bold light-gre">Post Creation:</span>  Users can submit text-based posts with titles and optional tags.</p>
+                        <p> <span class="bold light-gre">Comment System:</span>  Nested comments allow threaded discussions under each post.</p>
+                        <p> <span class="bold light-gre">Upvote/Downvote Logic:</span>  Basic voting system to rank posts and comments.</p>
+                        <p> <span class="bold light-gre">User Authentication:</span>  Basic login/signup flow using JWT.</p>
+                    </div>
+                    <div class="featured-3">
+                        <h2 class="light-gre">Description</h2>
+                        <p>A lightweight Reddit-style web application that allows users to browse, post, and interact with community-driven content. Built to replicate core Reddit functionality with a simplified UI and modular architecture.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="projects">
+        </section>
+        <section id="about" class="about">
+            <div class="about-container">
+                <div class="about-left">
+                    <div class="about-img-container">
+                        <img src="./img/profile.png" alt="">
+                        <div class="img-offset"></div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <h1><span class="light-gre">A</span>bout <span class="light-gre">M</span>e</h1>
+                    <p>I'm <span class="light-gre">Brandon Traviss</span>, a first-year Computer Programming student at Georgian College, passionate about building clean, scalable web solutions.</p>
+                    <p>Currently seeking a <span class="light-gre">web developer</span> position where I can deepen my expertise in both frontend and backend development, contribute to meaningful projects, and continue <span class="light-gre">growing</span> alongside experienced professionals.</p>
+                    <p>Over the past few years, I've <span class="light-gre">dedicated</span> myself to learning independently and building a strong foundation in development. Now, I'm ready to take the next step, and I recognize that reaching a <span class="light-gre">professional</span> level requires mentorship and insight from seasoned industry experts.</p>
+                    <div class="about-links-container">
+                            <a class="about-svg-links" target="_blank" href="https://www.github.com/BrandonTraviss">
+                                <img src="./img/svg/github.svg" alt="">
+                                Github
+                            </a>
+                            <!-- <div class="up-arrow-container">
+                                <a href="#"><img src="./img/svg/uparrow.svg" alt="">
+                                <p>Back to top</p></a>
+                            </div> -->
+                            <a class="about-svg-links" target="_blank" href="https://www.linkedin.com/in/brandon-traviss-57aa34369/">
+                                <img src="./img/svg/linkedIn.svg" alt="">
+                                LinkedIn
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+
+    </footer>
 </body>
 </html>

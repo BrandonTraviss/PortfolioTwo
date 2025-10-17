@@ -3,6 +3,17 @@ const navMenu = document.getElementById("mobile-nav");
 
 let clicked = false;
 
+const navLinks = navMenu.querySelectorAll("a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (clicked) {
+      toggleMenu();
+    }
+  });
+});
+
+
 function toggleMenu() {
     clicked = !clicked;
     console.log("Menu clicked:", clicked);
