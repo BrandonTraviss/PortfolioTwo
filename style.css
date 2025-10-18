@@ -144,6 +144,7 @@ nav ul li a:hover {
     z-index: 3;
 }
 
+
 .profile-img-container img {
     position: relative;
     border-radius: 50%;
@@ -292,6 +293,7 @@ nav ul li a:hover {
 }
 
 .featured-1 {
+    gap: 1rem;
     display: flex;
     padding-inline: 1rem;
     flex-direction: column;
@@ -302,6 +304,7 @@ nav ul li a:hover {
 }
 
 .featured-2 {
+    gap: 1rem;
     display: flex;
     padding-inline: 1rem;
     flex-direction: column;
@@ -311,6 +314,7 @@ nav ul li a:hover {
 }
 
 .featured-3 {
+    gap: 1rem;
     display: flex;
     padding-inline: 1rem;
     flex-direction: column;
@@ -330,8 +334,39 @@ nav ul li a:hover {
 
 .projects {
     border-top: 10px solid black;
-    height: 95vh;
+    min-height: 95vh;
     background-image: linear-gradient(to bottom, var(--secondary), #262731);
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.link-container-projects {
+    display: flex;
+    justify-content: center;
+    padding-block: 2rem;
+    gap: 5rem;
+}
+
+.project-card {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32vw;
+    min-height: 700px;
+}
+
+.project-img-container {
+    width: 32vw;
+}
+
+.project-img-container img {
+    width: 100%;
 }
 
 /* About Section */
@@ -402,6 +437,14 @@ nav ul li a:hover {
 }
 
 /* Reusable Classes */
+.pb-2 {
+    padding-block: 2rem;
+}
+
+.center {
+    text-align: center;
+}
+
 .lib {
     text-indent: 1rem;
 }
@@ -446,6 +489,7 @@ nav ul li a:hover {
 .up-arrow-container {
     height: 50px;
 }
+
 .up-arrow-container p {
     font-family: var(--audiowide);
 }
@@ -520,6 +564,31 @@ nav ul li a:hover {
         margin-top: 0rem;
         gap: 2rem;
         justify-content: center;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+    }
+    .project-img-container {
+        width: 100%;
+    }
+    .hero-main-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .featured-project-bot {
@@ -665,9 +734,11 @@ nav ul li a:hover {
         grid-column: 1 / -1;
         grid-row: 2;
     }
-    .cv-details{
+
+    .cv-details {
         margin-top: 4rem;
     }
+
     /* Bottom row: left-aligned */
     .featured-1 {
         grid-column: 1 / -1;
